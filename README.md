@@ -20,7 +20,7 @@ compared to default ripple-blobvault offered by PayWard, in particular:
 Configuration
 -------------
 
-In addition to mongodb.uri setting, you can customize a couple of
+In addition to `mongodb.uri` setting, you can customize a couple of
 parameters in your `application.conf` file:
 
 * `vault.allow_origin` -- allows to restrict access to a specific `Origin`
