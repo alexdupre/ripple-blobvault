@@ -25,3 +25,20 @@ parameters in your `application.conf` file:
 
 * `vault.allow_origin` -- allows to restrict access to a specific `Origin`
 * `vault.log` -- enable/disable logging of every access
+
+
+Running on Heroku
+-----------------
+
+The following environment variables are respected:
+
+* SECRET_KEY -- used to secure cryptographics functions.
+* MONGOHG_URI -- uri used by MongoHQ addon.
+
+For example:
+
+    $ heroku create
+    $ heroku addons:add mongohq
+    $ heroku config:add SECRET_KEY="$(pwgen -sy 100 1)"
+    $ git push heroku master
+    
